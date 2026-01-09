@@ -13,7 +13,7 @@ A fast and effective heuristic for Anticlustering in Euclidean spaces.
 ## ⚙️ Usage
 
 - To run the base version of ABA, look at the example in running_aba_base_version.py.
-- To run ABA for small anticlusters (or size 2), look at the example in running_aba_for_small_anticlusters.py.
+- To run ABA for small anticlusters (of size 2), look at the example in running_aba_for_small_anticlusters.py.
 - To run ABA with categories, look at the example in running_aba_with_categories.py.
 - To run ABA with hierarchical decomposition, look at the example in running_aba_with_hierarchical_decomposition.py
 
