@@ -2,6 +2,8 @@
 
 A fast and effective heuristic for Anticlustering in Euclidean spaces.
 
+![ABA Logo](figs/aba_logo.svg)
+
 ---
 
 ## 🚀 Installation
