@@ -1,6 +1,7 @@
 pyproject.toml
 .DS_Store
 uv.lock
+datasets/cover_example.csv
 figs/aba_logo.drawio
 figs/aba_logo.png
 figs/aba_logo.pdf
