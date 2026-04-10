@@ -5,7 +5,9 @@
 
 # **ABA - The Assignment-based Anticlustering Algorithm**
 
-A fast and effective heuristic for Anticlustering in Euclidean spaces.
+Anticlustering is a combinatorial optimization problem that consists of partitioning a set of objects into equally sized groups (anticlusters) such that objects within the same group are maximally diverse. Achieving diversity within groups is important in various applications, including recent large-scale applications in machine learning. The Assignment-based Anticlustering Algorithm (ABA) is designed for large-scale anticlustering in Euclidean spaces. It scales to millions of objects and hundreds of thousands of anticlusters. A detailed description of the algorithm can be found in our paper https://arxiv.org/abs/2601.06351.  
+
+Here we provide a Python implementation of our algorithm. The experiments in the paper were conducted using a C++ implementation. Please contact Philipp Baumann (philipp.baumann@unibe.ch) if you are interested in the C++ version.
 
 ---
 
@@ -26,7 +28,7 @@ A fast and effective heuristic for Anticlustering in Euclidean spaces.
 
 If you use this algorithm in your research, please cite the following paper:
 
-Baumann, P., Goldschmidt O., Hochbaum D.S., Yang J. (2026). A Fast and Effective Method for Euclidean Anticlustering: The Assignment-Based-Anticlustering Algorithm. Working paper.
+Baumann, P., Goldschmidt O., Hochbaum D.S., Yang J. (2026). A Fast and Effective Method for Euclidean Anticlustering: The Assignment-Based-Anticlustering Algorithm. arXiv paper.
 
 Bibtex:
 ```
