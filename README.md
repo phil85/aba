@@ -1,4 +1,4 @@
-<img src='figs/aba_logo_new.svg'>
+<img src='figs/aba_logo.svg'>
 
 [![License](https://img.shields.io/badge/License-MIT_License-blue)](LICENSE)
 [![Paper](https://img.shields.io/badge/Paper-Arxiv-green)](https://arxiv.org/abs/2601.06351)
