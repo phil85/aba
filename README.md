@@ -1,6 +1,7 @@
-<p align='center'>
-<img src='figs/aba_logo.svg' width="300">
-</p>
+<img src='figs/aba_logo.svg' width="400">
+
+[![License](https://img.shields.io/badge/License-MIT_License-blue)](LICENSE)
+[![Paper](https://img.shields.io/badge/Paper-Arxiv-green)](https://arxiv.org/abs/2601.06351)
 
 # **ABA - The Assignment-based Anticlustering Algorithm**
 
