@@ -1,8 +1,10 @@
+<p align='center'>
+<img src='figs/aba_logo.svg' width="300">
+</p>
+
 # **ABA - The Assignment-based Anticlustering Algorithm**
 
 A fast and effective heuristic for Anticlustering in Euclidean spaces.
-
-![ABA Logo](figs/aba_logo.svg)
 
 ---
 
