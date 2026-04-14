@@ -9,6 +9,8 @@ Anticlustering is a combinatorial optimization problem that consists of partitio
 
 Here we provide a Python implementation of our algorithm. The experiments in the paper were conducted using a C++ implementation. Please contact Philipp Baumann (philipp.baumann@unibe.ch) if you are interested in the C++ version.
 
+A variant of the ABA algorithm for maximum weight matching on Euclidean graphs is available here: https://github.com/phil85/aba-for-maximum-weight-matching.
+
 ---
 
 ## Installation
