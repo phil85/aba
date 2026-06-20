@@ -54,70 +54,12 @@ def assign_objects(X, centers, batch, categories=None, category_upper_bounds=Non
     return col_ind
 
 
-def get_batches(sorted_objects, n_clusters, categories=None, small_anticlusters_flag=False):
+def get_batches(sorted_objects, n_clusters, categories=None):
 
     if categories is None:
 
-        # Adjustment that often improves the objective function value when k is large
-        if small_anticlusters_flag:
-
-            # If N is divisible by K
-            if len(sorted_objects) % n_clusters == 0:
-
-                # Get length of one sublist
-                length_of_sublist = len(sorted_objects) // n_clusters
-
-                # Split sorted objects into sublists
-                sublists = np.array_split(sorted_objects, range(length_of_sublist, len(sorted_objects), length_of_sublist))
-
-                # Stack sublists on top of each other
-                stacked_sublists = np.vstack(sublists)
-
-                # Create batches by taking columns of the stacked sublists
-                batches = list(stacked_sublists.T)
-
-            else:
-
-                # Get minimum size of anticluster
-                min_size_anticluster = len(sorted_objects) // n_clusters
-
-                # Get maximum size of anticluster
-                max_size_anticluster = min_size_anticluster + 1
-
-                # Number of min-size anticlusters
-                n_min_size_anticlusters = max_size_anticluster * n_clusters - len(sorted_objects)
-
-                # Number of max-size anticlusters
-                n_max_size_anticlusters = len(sorted_objects) - min_size_anticluster * n_clusters
-
-                # Split sorted objects into min-size and max-size parts
-                part1, part2 = np.split(sorted_objects, [n_min_size_anticlusters * min_size_anticluster])
-
-                # Get number of short sublists
-                short_sublists = np.array_split(part1, range(min_size_anticluster, len(part1), min_size_anticluster))
-
-                # Get number of long sublists
-                long_sublists = np.array_split(part2, range(max_size_anticluster, len(part2), max_size_anticluster))
-
-                # Stack short sublists on top of each other
-                stacked_short_sublists = np.vstack(short_sublists)
-
-                # Stack long sublists on top of each other
-                stacked_long_sublists = np.vstack(long_sublists)
-
-                # Extract last column from stacked_long_sublists
-                last_column = stacked_long_sublists[:, -1]
-
-                # Stack short and long sublists (without last column) on top of each other
-                combined_stacked_sublists = np.vstack((stacked_short_sublists, stacked_long_sublists[:, :-1]))
-
-                # Create batches
-                batches = list(combined_stacked_sublists.T) + [last_column]
-
-        else: 
-
-            # Split sorted objects into batches of size n_clusters
-            batches = np.array_split(sorted_objects, range(n_clusters, len(sorted_objects), n_clusters))
+        # Split sorted objects into batches of size n_clusters
+        batches = np.array_split(sorted_objects, range(n_clusters, len(sorted_objects), n_clusters))
 
         return batches            
     else:
@@ -166,7 +108,7 @@ def get_batches(sorted_objects, n_clusters, categories=None, small_anticlusters_
         return batches, n_complete_splits
 
 
-def run_aba(X, n_anticlusters, categories=None, small_anticlusters_flag=False):
+def run_aba(X, n_anticlusters, categories=None):
 
     # Convert X to float numpy array
     X = np.array(X).astype(float)
@@ -197,7 +139,7 @@ def run_aba(X, n_anticlusters, categories=None, small_anticlusters_flag=False):
 
     # Get batches
     if categories is None:
-        batches = get_batches(sorted_objects, n_anticlusters, small_anticlusters_flag=small_anticlusters_flag)
+        batches = get_batches(sorted_objects, n_anticlusters)
     else:
         batches, n_complete_batches = get_batches(sorted_objects, n_anticlusters, categories[sorted_objects])
 

@@ -10,7 +10,7 @@ from aba import run_aba
 X = pd.read_csv('datasets/npi.csv', header=None).values.astype(float)
 
 # Set number of anticlusters
-n_anticlusters = 5
+n_anticlusters = 1000
 
 # Start stopwatch
 tic = time.perf_counter()
