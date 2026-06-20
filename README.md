@@ -7,7 +7,7 @@
 
 Anticlustering is a combinatorial optimization problem that consists of partitioning a set of objects into equally sized groups (anticlusters) such that objects within the same group are maximally diverse. Achieving diversity within groups is important in various applications, including recent large-scale applications in machine learning. The Assignment-based Anticlustering Algorithm (ABA) is designed for large-scale anticlustering in Euclidean spaces. It scales to millions of objects and hundreds of thousands of anticlusters. A detailed description of the algorithm can be found in our paper https://arxiv.org/abs/2601.06351. The paper also presents the main results of a computational study in which we compare the ABA algorithm with leading algorithms. The detailed results from the study are available [here](https://github.com/phil85/aba-results).       
 
-Here we provide a Python implementation of our algorithm. The experiments in the paper were conducted using a C++ implementation. Please contact Philipp Baumann (philipp.baumann@unibe.ch) if you are interested in the C++ version.
+Here we provide a Python implementation of our algorithm. The experiments in the paper were conducted using the C++ implementation of the ABA algorithm, which is available [here](https://github.com/j-yang-932/aba_Cpp). 
 
 A variant of the ABA algorithm for maximum weight matching on Euclidean graphs is available [here](https://github.com/phil85/aba-for-maximum-weight-matching).
 
@@ -22,7 +22,6 @@ A variant of the ABA algorithm for maximum weight matching on Euclidean graphs i
 ## Usage
 
 - To run the base version of ABA, look at the example in running_aba_base_version.py.
-- To run ABA for small anticlusters (of size 2), look at the example in running_aba_for_small_anticlusters.py.
 - To run ABA with categories, look at the example in running_aba_with_categories.py.
 - To run ABA with hierarchical decomposition, look at the example in running_aba_with_hierarchical_decomposition.py
 
